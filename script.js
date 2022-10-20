@@ -14,11 +14,14 @@ console.log(typeof initialPrice, initialPrice);
 //   3a SE l'utente ha un età compresa tre i 18 e i 64 anni (compresi) non applico nessuno sconto
 if( age > 17 && age < 65 ) {
     let totPrice = Number(initialPrice * 1);
-    
-} else if ( age < 18) {
+    console.log(typeof totPrice, totPrice)
+} else if ( age < 18 ) {
     let totPrice = Number(initialPrice * 0.2);
     console.log(typeof totPrice, totPrice)
-} 
+} else if ( age > 64 ) {
+    let totPrice = Number(initialPrice * 0.4);
+    console.log(typeof totPrice, totPrice)
+}
 //   3b SE l'utente ha un'età < 18 anni (minorenne) applico il 20% di sconto
 //   3c ALTRIMENTI applico il 40% di sconto SE l'utente ha un'età > 64 anni
 // 4. Output del prezo finale (con massimo due decimali)
